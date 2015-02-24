@@ -1,3 +1,4 @@
+/*jshint node:true, indent:4, maxlen:140*/
 var speakeasy = require('speakeasy');
 
 module.exports = function(Employee) {
@@ -115,7 +116,9 @@ module.exports = function(Employee) {
                 {arg: 'credentials', type: 'object', required: true, http: {source: 'body'}}
             ],
             returns: {
-                arg: 'accessToken', type: 'object', root: true,
+                arg: 'accessToken',
+                type: 'object',
+                root: true,
                 description: 'The response body contains properties of the AccessToken created on login.\n'
             },
             http: {verb: 'post'}
